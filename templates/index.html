@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Heart Disease Analytics</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family:'Segoe UI';
+background:#f4f8ff;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.navbar-brand{
+font-weight:bold;
+font-size:22px;
+color:#e63946;
+}
+
+.nav-link{
+margin-left:20px;
+font-weight:500;
+color:#333;
+}
+
+.nav-link:hover{
+color:#e63946;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#ff6b6b,#ff9f43);
+color:white;
+padding:100px 0;
+}
+
+.hero h1{
+font-size:50px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+.btn-hero{
+background:white;
+color:#ff6b6b;
+border-radius:30px;
+padding:12px 30px;
+font-weight:600;
+}
+
+.btn-hero:hover{
+background:#ffecec;
+}
+
+.hero-img{
+width:420px;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 0;
+}
+
+.section-title{
+font-weight:bold;
+color:#2c3e50;
+}
+
+/* FEATURES */
+
+.feature-card{
+background:white;
+border-radius:15px;
+padding:30px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.feature-icon{
+font-size:40px;
+color:#ff6b6b;
+margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+background:#ff6b6b;
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+.stat h2{
+font-size:45px;
+font-weight:bold;
+}
+
+/* DASHBOARD PREVIEW */
+
+.dashboard{
+padding:80px 0;
+background:#f8f9ff;
+}
+
+.dashboard-box{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+<a class="navbar-brand" href="{{ url_for('home') }}">
+<i class="fa-solid fa-heart-pulse"></i> Heart Disease Analytics
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('about') }}">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url_for('story') }}">Story</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<h1>Heart Disease Data Analytics</h1>
+
+<p>
+An interactive healthcare analytics project that explores heart disease
+risk factors using Tableau dashboards and real-world patient datasets.
+</p>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-hero mt-3">
+Explore Dashboard
+</a>
+
+</div>
+
+<div class="col-md-6 text-center">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"
+class="hero-img">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT PROJECT -->
+
+<section class="about">
+
+<div class="container text-center">
+
+<h2 class="section-title mb-4">About This Project</h2>
+
+<p class="w-75 mx-auto">
+
+This project analyzes heart disease datasets to identify patterns
+in patient health indicators such as cholesterol levels,
+blood pressure, age, and lifestyle factors.
+
+Using Tableau dashboards, we visualize trends and insights
+that help understand the major causes of cardiovascular diseases.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="container mb-5">
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="fa-solid fa-heart"></i>
+</div>
+
+<h5>Heart Risk Factors</h5>
+
+<p>
+Analyze major cardiovascular risk factors including cholesterol,
+blood pressure, and patient age.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h5>Interactive Analytics</h5>
+
+<p>
+Visualize heart disease patterns using dynamic
+Tableau dashboards.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+<i class="fa-solid fa-stethoscope"></i>
+</div>
+
+<h5>Health Insights</h5>
+
+<p>
+Generate insights that help understand cardiovascular
+disease trends and risks.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4 stat">
+<h2>1000+</h2>
+<p>Patient Records Analyzed</p>
+</div>
+
+<div class="col-md-4 stat">
+<h2>15+</h2>
+<p>Health Variables</p>
+</div>
+
+<div class="col-md-4 stat">
+<h2>5+</h2>
+<p>Interactive Dashboards</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DASHBOARD PREVIEW -->
+
+<section class="dashboard">
+
+<div class="container text-center">
+
+<h2 class="section-title mb-4">
+Tableau Dashboard
+</h2>
+
+<div class="dashboard-box">
+
+<p>
+Explore the full interactive Tableau dashboard
+to analyze heart disease patterns.
+</p>
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-danger mt-2">
+View Dashboard
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Heart Disease Analytics | Healthcare Data Science Project
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
