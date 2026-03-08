@@ -23,23 +23,18 @@ background:#f4f8ff;
 
 .navbar{
 background:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 .navbar-brand{
 font-weight:bold;
 font-size:22px;
-color:#e63946;
+color:#d63031;
 }
 
 .nav-link{
 margin-left:20px;
 font-weight:500;
-color:#333;
-}
-
-.nav-link:hover{
-color:#e63946;
 }
 
 /* HERO */
@@ -131,7 +126,7 @@ background:#f8f9ff;
 
 .dashboard-box{
 background:white;
-padding:30px;
+padding:20px;
 border-radius:12px;
 box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
@@ -157,7 +152,7 @@ text-align:center;
 
 <div class="container">
 
-<a class="navbar-brand" href="{{ url_for('home') }}">
+<a class="navbar-brand" href="#">
 <i class="fa-solid fa-heart-pulse"></i> Heart Disease Analytics
 </a>
 
@@ -170,19 +165,19 @@ text-align:center;
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
-<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+<a class="nav-link" href="/">Home</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="{{ url_for('about') }}">About</a>
+<a class="nav-link" href="/about">About</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+<a class="nav-link" href="/dashboard">Dashboard</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="{{ url_for('story') }}">Story</a>
+<a class="nav-link" href="/story">Story</a>
 </li>
 
 </ul>
@@ -206,11 +201,12 @@ text-align:center;
 <h1>Heart Disease Data Analytics</h1>
 
 <p>
-An interactive healthcare analytics project that explores heart disease
-risk factors using Tableau dashboards and real-world patient datasets.
+An interactive data analytics project that explores heart disease
+risk factors using powerful Tableau visualizations and real-world
+health datasets.
 </p>
 
-<a href="{{ url_for('dashboard') }}" class="btn btn-hero mt-3">
+<a href="/dashboard" class="btn btn-hero mt-3">
 Explore Dashboard
 </a>
 
@@ -218,7 +214,7 @@ Explore Dashboard
 
 <div class="col-md-6 text-center">
 
-<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"
+<img src="https://cdn-icons-png.flaticon.com/512/833/833472.png"
 class="hero-img">
 
 </div>
@@ -240,12 +236,12 @@ class="hero-img">
 
 <p class="w-75 mx-auto">
 
-This project analyzes heart disease datasets to identify patterns
+This project analyzes heart disease data to identify patterns
 in patient health indicators such as cholesterol levels,
 blood pressure, age, and lifestyle factors.
 
 Using Tableau dashboards, we visualize trends and insights
-that help understand the major causes of cardiovascular diseases.
+that help understand the major causes of heart disease.
 
 </p>
 
@@ -271,8 +267,8 @@ that help understand the major causes of cardiovascular diseases.
 <h5>Heart Risk Factors</h5>
 
 <p>
-Analyze major cardiovascular risk factors including cholesterol,
-blood pressure, and patient age.
+Analyze risk factors such as cholesterol,
+blood pressure, and age.
 </p>
 
 </div>
@@ -291,8 +287,8 @@ blood pressure, and patient age.
 <h5>Interactive Analytics</h5>
 
 <p>
-Visualize heart disease patterns using dynamic
-Tableau dashboards.
+Visualize heart disease trends using
+dynamic Tableau dashboards.
 </p>
 
 </div>
@@ -311,8 +307,8 @@ Tableau dashboards.
 <h5>Health Insights</h5>
 
 <p>
-Generate insights that help understand cardiovascular
-disease trends and risks.
+Discover insights that help in understanding
+cardiovascular disease patterns.
 </p>
 
 </div>
@@ -334,7 +330,7 @@ disease trends and risks.
 
 <div class="col-md-4 stat">
 <h2>1000+</h2>
-<p>Patient Records Analyzed</p>
+<p>Patients Data Analyzed</p>
 </div>
 
 <div class="col-md-4 stat">
@@ -371,7 +367,7 @@ Explore the full interactive Tableau dashboard
 to analyze heart disease patterns.
 </p>
 
-<a href="{{ url_for('dashboard') }}" class="btn btn-danger mt-2">
+<a href="/dashboard" class="btn btn-danger mt-2">
 View Dashboard
 </a>
 
@@ -387,7 +383,7 @@ View Dashboard
 <footer>
 
 <p>
-© 2026 Heart Disease Analytics | Healthcare Data Science Project
+© 2026 Heart Disease Analytics | Data Science Project
 </p>
 
 </footer>
